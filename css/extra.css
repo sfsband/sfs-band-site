@@ -1,0 +1,9 @@
+.bg-img { background: url('../images/hero-bg.jpg')center center; background-size:cover; }
+
+.footer {
+  background-color: #dddddd;
+}
+
+.h3 {
+  font-family: 'Patrick Hand', cursive;
+}
