@@ -9,9 +9,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="./js/epic.js"></script>
   </head>
   <body>
+
+    <!-- Not done notification -->
+    <div class="container is-fluid">
+      <div class="notification is-primary">
+        <button class="delete"></button>
+        <p class="text"><strong>Heads up!</strong> This website is <em>heavily</em> under construction, and
+        all content is subject to change or placeholder.</p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+          const $notification = $delete.parentNode;
+
+          $delete.addEventListener('click', () => {
+            $notification.parentNode.removeChild($notification);
+          });
+        });
+      });
+    </script>
  
     <!-- Hero for the top of the page -->
     <section class="hero is-primary is-large bg-img">
@@ -46,7 +66,7 @@
               The Marching Knights take to the field in the Fall performing at SFS Football games, home and away! 
               The Marching Knights keep the fans engaged throughout the game.
               At halftime, Mr. Collier and his team arrange for a memorable show every week playing classic hits all season long. 
-            </p>
+            </p><br>
             <img src="./images/hero-bg.jpg">
           </div>
         </div>
@@ -54,8 +74,10 @@
           <div class="notification is-warning">
             <p class="title">Pep Band</p>
             <p class="text">
-              The Pep band plays songs during home basketball games.  
-            </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Vestibulum elementum purus eget urna aliquam ultricies. 
+              Nulla id imperdiet leo. Maecenas semper risus nec odio egestas varius. 
+            </p><br>
             <img src="./images/hero-bg.jpg">
           </div>
         </div>
@@ -63,8 +85,11 @@
           <div class="notification is-warning">
             <p class="title">Concert Band</p>
             <p class="text">
-              The concert band plays more sophisticated music at two concerts every year. 
-            </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Morbi porta pulvinar nibh, vitae vestibulum urna vestibulum eu. 
+              Cras fringilla neque quis ante rhoncus pulvinar nec quis odio. 
+              Quisque sed nunc ut mauris. 
+            </p><br>
             <img src="./images/hero-bg.jpg">
           </div>
         </div>
@@ -120,11 +145,12 @@
           <div class="notification is-warning">
             <div class="columns">
               <div class="column is-two-thirds">
-                <p class="title">Easy to join</p>
+                <p class="title">Lorem Ipsum</p>
                 <p class="text">
-                  The band allows you to play a wide variety of instruments, from woodwinds to brass to percussion.
-                  In addition, we will work with you at your skill level.
-                  In fact, many of our students had no experience with their instrument when they started.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Cras finibus hendrerit enim, vitae gravida tortor laoreet nec. 
+                  Curabitur ultricies dolor quis dolor lacinia venenatis. 
+                  Aliquam a tellus sit. 
                 </p>
               </div>
               <div class="column is-one-third">
@@ -143,7 +169,7 @@
         <p class="text">
           If you want to join band, you can fill out the interest form.
           If you have any questions, you can send the director an email.
-        </p>
+        </p><br>
         <a class="button is-warning" href="https://google.com">Register interest</a>
         <a class="button is-warning" href="mailto:ccollier@sfsknights.org">Send Mr. Collier a question</a>
       </div>
