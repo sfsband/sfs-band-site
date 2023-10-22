@@ -14,24 +14,32 @@
   <body>
 
     <!-- Not done notification -->
-    <div class="container">
+    <div class="container"  id="wip">
       <div class="notification is-primary">
-        <button class="delete"></button>
+        <button class="delete" onclick="hideNotification()"></button>
         <p class="text"><strong>Heads up!</strong> This website is <em>heavily</em> under construction, and
         all content is subject to change or placeholder.</p>
       </div>
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
-          const $notification = $delete.parentNode;
+      function hideNotification() {
+        var x = document.getElementById("wip");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
 
-          $delete.addEventListener('click', () => {
-            $notification.parentNode.removeChild($notification);
-          });
-        });
-      });
+      function toggleForm() {
+        var x = document.getElementById("form");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      } 
     </script>
  
     <!-- Hero for the top of the page -->
@@ -188,8 +196,9 @@
             <p class="text">
               If you want to join band, you can fill out the interest form.
               This isn't a commitment; you can decide later not to.
+              Scroll down to see the form after hitting the button!
             </p><br>
-            <button data-tally-open="3joEvR" data-tally-layout="modal" data-tally-width="700" data-tally-emoji-text="🎺" data-tally-emoji-animation="wave" data-tally-auto-close="3000">Fill out the interest form</button>
+            <a class="button is-primary" onclick="toggleForm()">Fill out the form</a>
           </div>
         </div>
         <div class="column">
@@ -205,7 +214,13 @@
           </div>
         </div>
       </div>
+
+      <div class="notification is-info" id="form" style="display: none;">
+        <button class="delete" onclick="toggleForm()"></button>
+        <iframe data-tally-src="https://tally.so/embed/3joEvR?transparentBackground=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="SFS Band Interest Form"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+      </div>
     </div><br>
+
 
 
     <!-- Page footer -->
