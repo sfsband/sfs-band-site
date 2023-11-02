@@ -1,1 +1,1 @@
-The official recruitment page for the SFS band. Heavily under construction.
+The official recruitment page for the SFS band. No longer heavily under construction.
