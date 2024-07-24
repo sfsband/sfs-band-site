@@ -1,5 +1,8 @@
 .bg-img { background: url('../images/hero-bg.jpg')center center; background-size:cover; }
-/* No idea why this bitch won't become higher resolution*/
+/* No idea why this bitch won't become higher resolution */
+
+.bg-img-2 { background: url('../images/sheet-music.jpg')center center; background-size:cover; }
+/* No idea why that last comment was so aggresive, my bad */
 
 .footer {
   background-color: #dddddd;
